@@ -83,7 +83,18 @@ echo '{"hook_event_name":"Notification","notification_type":"permission_prompt"}
 echo '{"hook_event_name":"Stop"}' | CLAUDE_PLUGIN_ROOT=$(pwd) ./hooks/notify.sh
 ```
 
+## Claude Icon
+
+The plugin includes a Claude icon at `assets/claude.png`. To show it in notifications, install `terminal-notifier`:
+
+```sh
+brew install terminal-notifier
+```
+
+When `terminal-notifier` is available, the icon appears as a thumbnail on the right side of each notification. Without it, notifications still work via `osascript` — just without the custom icon.
+
 ## Requirements
 
 - macOS (uses `osascript` and `afplay`)
 - Python 3 (`/usr/bin/python3`, ships with macOS)
+- `terminal-notifier` (optional, for Claude icon — `brew install terminal-notifier`)

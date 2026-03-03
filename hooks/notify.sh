@@ -76,12 +76,23 @@ while IFS='=' read -r key value; do
 done <<< "$CONFIG_VARS"
 
 if [[ "$ENABLED" == "true" ]]; then
-  # Send macOS notification
-  /usr/bin/osascript -e "display notification \"${MESSAGE}\" with title \"${TITLE}\"" &>/dev/null || true
+  ICON="${PLUGIN_ROOT}/assets/claude.png"
 
-  # Play sound in background if enabled
-  if [[ "$SOUND" == "true" && -f "$SOUND_FILE" ]]; then
-    /usr/bin/afplay "$SOUND_FILE" &
+  # Use terminal-notifier if available (shows Claude icon via -contentImage)
+  if command -v terminal-notifier &>/dev/null && [[ -f "$ICON" ]]; then
+    if [[ "$SOUND" == "true" && -f "$SOUND_FILE" ]]; then
+      terminal-notifier -title "$TITLE" -message "$MESSAGE" -contentImage "$ICON" -sound "$SOUND_FILE" &>/dev/null || true
+    else
+      terminal-notifier -title "$TITLE" -message "$MESSAGE" -contentImage "$ICON" &>/dev/null || true
+    fi
+  else
+    # Fallback: plain osascript notification (no custom icon)
+    /usr/bin/osascript -e "display notification \"${MESSAGE}\" with title \"${TITLE}\"" &>/dev/null || true
+
+    # Play sound in background if enabled
+    if [[ "$SOUND" == "true" && -f "$SOUND_FILE" ]]; then
+      /usr/bin/afplay "$SOUND_FILE" &
+    fi
   fi
 fi
 
