@@ -1,0 +1,23 @@
+{
+  "permission_prompt": {
+    "enabled": true,
+    "sound": true,
+    "sound_file": "/System/Library/Sounds/Ping.aiff",
+    "title": "Claude Code",
+    "message": "Permission needed"
+  },
+  "idle_prompt": {
+    "enabled": true,
+    "sound": true,
+    "sound_file": "/System/Library/Sounds/Blow.aiff",
+    "title": "Claude Code",
+    "message": "Waiting for your input"
+  },
+  "stop": {
+    "enabled": true,
+    "sound": true,
+    "sound_file": "/System/Library/Sounds/Glass.aiff",
+    "title": "Claude Code",
+    "message": "Task completed"
+  }
+}

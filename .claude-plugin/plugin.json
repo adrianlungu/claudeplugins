@@ -1,0 +1,5 @@
+{
+  "name": "notify",
+  "description": "Native macOS notifications for Claude Code events: permission prompts, idle waiting, and task completion",
+  "version": "1.0.0"
+}
