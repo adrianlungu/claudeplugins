@@ -85,16 +85,16 @@ echo '{"hook_event_name":"Stop"}' | CLAUDE_PLUGIN_ROOT=$(pwd) ./hooks/notify.sh
 
 ## Claude Icon
 
-The plugin includes a Claude icon at `assets/claude.png`. To show it in notifications, install `terminal-notifier`:
+The plugin includes a Claude icon at `assets/claude.png`. To show it in notifications, install `alerter` (works on macOS Sequoia and later):
 
 ```sh
-brew install terminal-notifier
+brew install alerter
 ```
 
-When `terminal-notifier` is available, the icon appears as a thumbnail on the right side of each notification. Without it, notifications still work via `osascript` — just without the custom icon.
+On first run, macOS will prompt you to grant notification permission to alerter — approve it. The Claude logo will then appear as a thumbnail on the right side of each notification. Without `alerter`, notifications still work via `osascript` — just without the custom icon.
 
 ## Requirements
 
 - macOS (uses `osascript` and `afplay`)
 - Python 3 (`/usr/bin/python3`, ships with macOS)
-- `terminal-notifier` (optional, for Claude icon — `brew install terminal-notifier`)
+- `alerter` (optional, for Claude icon — `brew install alerter`)

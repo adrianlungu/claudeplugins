@@ -78,21 +78,17 @@ done <<< "$CONFIG_VARS"
 if [[ "$ENABLED" == "true" ]]; then
   ICON="${PLUGIN_ROOT}/assets/claude.png"
 
-  # Use terminal-notifier if available (shows Claude icon via -contentImage)
-  if command -v terminal-notifier &>/dev/null && [[ -f "$ICON" ]]; then
-    if [[ "$SOUND" == "true" && -f "$SOUND_FILE" ]]; then
-      terminal-notifier -title "$TITLE" -message "$MESSAGE" -contentImage "$ICON" -sound "$SOUND_FILE" &>/dev/null || true
-    else
-      terminal-notifier -title "$TITLE" -message "$MESSAGE" -contentImage "$ICON" &>/dev/null || true
-    fi
+  # Use alerter if available — shows Claude icon as thumbnail, works on macOS Sequoia
+  if command -v alerter &>/dev/null && [[ -f "$ICON" ]]; then
+    alerter --title "$TITLE" --message "$MESSAGE" --app-icon "$ICON" --timeout 5 &>/dev/null || true
   else
-    # Fallback: plain osascript notification (no custom icon)
+    # Fallback: plain osascript (no custom icon)
     /usr/bin/osascript -e "display notification \"${MESSAGE}\" with title \"${TITLE}\"" &>/dev/null || true
+  fi
 
-    # Play sound in background if enabled
-    if [[ "$SOUND" == "true" && -f "$SOUND_FILE" ]]; then
-      /usr/bin/afplay "$SOUND_FILE" &
-    fi
+  # Play sound in background if enabled (afplay supports full file paths)
+  if [[ "$SOUND" == "true" && -f "$SOUND_FILE" ]]; then
+    /usr/bin/afplay "$SOUND_FILE" &
   fi
 fi
 
