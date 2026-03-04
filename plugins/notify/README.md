@@ -97,4 +97,4 @@ On first run, macOS will prompt you to grant notification permission to alerter 
 
 - macOS (uses `osascript` and `afplay`)
 - Python 3 (`/usr/bin/python3`, ships with macOS)
-- `alerter` (optional, for Claude icon — `brew install alerter`)
+- `alerter` (optional, for Claude icon — `brew install vjeantet/tap/alerter`)
