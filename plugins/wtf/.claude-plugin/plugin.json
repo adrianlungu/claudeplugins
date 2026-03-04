@@ -1,0 +1,10 @@
+{
+  "name": "wtf",
+  "description": "Tracks WTF moments during Claude's work and reports them with a rating at task completion",
+  "version": "1.0.0",
+  "author": {
+    "name": "Adrian Lungu"
+  },
+  "license": "MIT",
+  "keywords": ["wtf", "code-quality", "tracking", "metrics"]
+}
