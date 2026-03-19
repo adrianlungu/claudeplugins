@@ -13,7 +13,7 @@ Covers Go 1.0 through 1.26, including: modern error handling (`errors.Is`, `erro
 Install from within Claude Code:
 
 ```
-/plugin install golang@claudeplugins
+/plugin install golang@adrianlungu-claude-plugins
 ```
 
 Then invoke in any Go project with:
