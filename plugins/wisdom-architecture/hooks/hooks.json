@@ -33,8 +33,8 @@
       {
         "hooks": [
           {
-            "type": "prompt",
-            "prompt": "SLOW MODULE — SESSION END: Before finishing, review .claude/wisdom-scratchpad.md. Look at the last 5 predictions. Extract or update any principles. Update the error trend. Write the updated scratchpad to disk. Keep this brief — just update the file, no long explanation needed."
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/session-end.sh"
           }
         ]
       }
