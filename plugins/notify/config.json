@@ -1,22 +1,27 @@
 {
-  "permission_prompt": {
+  "click_to_focus": true,
+
+  "permission_request": {
     "enabled": true,
     "sound": true,
-    "sound_file": "/System/Library/Sounds/Ping.aiff",
+    "sound_file_macos": "/System/Library/Sounds/Ping.aiff",
+    "sound_file_linux": "/usr/share/sounds/freedesktop/stereo/bell.oga",
     "title": "Claude Code",
     "message": "Permission needed"
   },
   "idle_prompt": {
     "enabled": true,
     "sound": true,
-    "sound_file": "/System/Library/Sounds/Blow.aiff",
+    "sound_file_macos": "/System/Library/Sounds/Blow.aiff",
+    "sound_file_linux": "/usr/share/sounds/freedesktop/stereo/message-new-instant.oga",
     "title": "Claude Code",
     "message": "Waiting for your input"
   },
   "stop": {
     "enabled": true,
     "sound": true,
-    "sound_file": "/System/Library/Sounds/Glass.aiff",
+    "sound_file_macos": "/System/Library/Sounds/Glass.aiff",
+    "sound_file_linux": "/usr/share/sounds/freedesktop/stereo/complete.oga",
     "title": "Claude Code",
     "message": "Task completed"
   }

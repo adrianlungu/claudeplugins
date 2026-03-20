@@ -8,8 +8,8 @@
     {
       "name": "notify",
       "source": "./plugins/notify",
-      "description": "Native macOS notifications for Claude Code events: permission prompts, idle waiting, and task completion",
-      "version": "1.0.0"
+      "description": "Desktop notifications for Claude Code events on macOS and Linux — rich content, sound, and click-to-focus",
+      "version": "2.0.0"
     }
   ]
 }
