@@ -16,6 +16,12 @@
       "source": "./plugins/golang",
       "description": "Various go-related skills",
       "version": "1.0.0"
+    },
+    {
+      "name": "wisdom-architecture",
+      "source": "./plugins/wisdom-architecture",
+      "description": "Fast/slow/meta cognitive architecture for Claude Code. Predictions, principles, and meta-review produce measurably more consistent and accurate coding behavior.",
+      "version": "1.0.0"
     }
   ]
 }
