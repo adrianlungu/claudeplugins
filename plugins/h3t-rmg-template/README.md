@@ -76,6 +76,10 @@ pack.write("output.h3t")
 | Format rejected | Wrong field counts | Must be `12, 10, 4, 8, 10, 18, 4` |
 | Missing features | Old 129-col format | Must use 140-col format (12 towns, 6 new zone fields) |
 
+## Examples
+
+See [examples/h3t-rmg-template](../../examples/h3t-rmg-template/) in the repo root for sample templates generated with this plugin.
+
 ## License
 
 MIT

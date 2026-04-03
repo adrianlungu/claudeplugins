@@ -36,6 +36,24 @@ Based on [Modern Go Guidelines](https://github.com/JetBrains/go-modern-guideline
 
 ---
 
+### h3t-rmg-template
+
+Create Heroes 3: Horn of the Abyss RMG template (.h3t) files using Claude Code. Describe a map layout in natural language and get a valid template file for the HotA random map generator.
+
+- Full h3t format spec (HotA 1.7+, 140-column format with Factory/Bulwark)
+- Python generator library for programmatic template creation
+- Multi-template packs (difficulty variants in one file)
+- Design guidelines from competitive templates (Jebus Cross, Diamond, Firewalk, etc.)
+- [Example templates](examples/h3t-rmg-template/)
+
+```
+/plugin install h3t-rmg-template@adrianlungu-claude-plugins
+```
+
+[Read more](plugins/h3t-rmg-template/README.md)
+
+---
+
 ### wisdom-architecture
 
 A fast/slow/meta cognitive architecture that makes Claude Code learn from its own mistakes within and across sessions. Implements prediction-driven learning, principle extraction, and meta-review against accumulated knowledge.
