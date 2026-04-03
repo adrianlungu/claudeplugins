@@ -1,0 +1,10 @@
+{
+  "name": "h3t-rmg-template",
+  "description": "Create and edit Heroes 3 HotA RMG template (.h3t) files with guided zone design, connection topology, treasure balancing, and valid TSV output",
+  "version": "1.0.0",
+  "author": {
+    "name": "Adrian Lungu"
+  },
+  "license": "MIT",
+  "keywords": ["heroes3", "homm3", "hota", "rmg", "template", "map-generation", "h3t"]
+}
